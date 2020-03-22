@@ -1,0 +1,9 @@
+[color]
+ui = true
+
+[push]
+default = simple
+
+[user]
+email = thomas@thomaswoodcock.net
+name = Thomas Woodcock
