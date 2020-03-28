@@ -1,11 +1,23 @@
-# Install Visual Studio Code extensions
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension eamodio.gitlens
-code --install-extension esbenp.prettier-vscode
-code --install-extension ms-vscode.powershell
-code --install-extension pkief.material-icon-theme
-code --install-extension zhuangtongfa.material-theme
+#Requires -RunAsAdministrator
 
-# Link config files
-New-Item -ItemType SymbolicLink -Path "${env:USERPROFILE}\.gitconfig" -Value ".\.gitconfig" -Force
-New-Item -ItemType SymbolicLink -Path "${env:APPDATA}\Code\User\settings.json" -Value ".\vscode.settings.json" -Force
+. .\Helpers.ps1
+
+# Sync Visual Studio Code extensions
+$extensions = @(
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "ms-vscode.powershell",
+    "pkief.material-icon-theme",
+    "zhuangtongfa.material-theme"
+)
+
+SyncVsCodeExtensions $extensions
+
+# Create symbolic links
+$symbolicLinks = @(
+    ("${env:USERPROFILE}\.gitconfig",".\.gitconfig"),
+    ("${env:APPDATA}\Code\User\settings.json",".\vscode.settings.json")
+)
+
+CreateSymbolicLinks $symbolicLinks
