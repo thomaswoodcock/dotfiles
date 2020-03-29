@@ -18,7 +18,7 @@ scoop bucket add extras
 Write-Host "Installing applications using Scoop..."
 scoop install git vscode
 
-# Update applications
+# Update applications using Scoop
 Write-Host "Updating applications using Scoop..."
 scoop update *
 
