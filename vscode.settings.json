@@ -14,6 +14,9 @@
   "files.trimTrailingWhitespace": true,
   // One Dark Pro
   "oneDarkPro.vivid": true,
+  // PowerShell
+  "powershell.integratedConsole.showOnStartup": false,
+  "powershell.startAsLoginShell.osx": false,
   // Terminal
   "terminal.integrated.shell.windows": "pwsh.exe",
   // Workbench
