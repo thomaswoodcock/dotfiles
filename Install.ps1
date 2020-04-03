@@ -16,7 +16,7 @@ scoop bucket add extras
 
 # Install applications using Scoop
 Write-Host "Installing applications using Scoop..."
-scoop install git vscode
+scoop install git vscode windows-terminal
 
 # Update applications using Scoop
 Write-Host "Updating applications using Scoop..."
@@ -41,7 +41,8 @@ Write-Host "Creating symbolic links..."
 
 $symbolicLinks = @(
     ("${env:USERPROFILE}\.gitconfig",".\.gitconfig"),
-    ("${env:APPDATA}\Code\User\settings.json",".\vscode.settings.json")
+    ("${env:APPDATA}\Code\User\settings.json",".\vscode.settings.json"),
+    ("${env:LOCALAPPDATA}\Microsoft\Windows Terminal\profiles.json", ".\windows-terminal.profiles.json")
 )
 
 CreateSymbolicLinks $symbolicLinks
