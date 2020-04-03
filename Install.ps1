@@ -16,7 +16,7 @@ scoop bucket add extras
 
 # Install applications using Scoop
 Write-Host "Installing applications using Scoop..."
-scoop install git vscode windows-terminal
+scoop install git pwsh vscode windows-terminal
 
 # Update applications using Scoop
 Write-Host "Updating applications using Scoop..."
