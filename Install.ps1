@@ -13,10 +13,17 @@ if (-not(Get-Command scoop -ErrorAction SilentlyContinue)) {
 # Add Scoop buckets
 Write-Host "Adding Scoop buckets..."
 scoop bucket add extras
+scoop bucket add nerd-fonts
 
 # Install applications using Scoop
 Write-Host "Installing applications using Scoop..."
-scoop install git nodejs pwsh vscode windows-terminal
+
+## Developer tools
+scoop install git nodejs vscode
+## System utilities
+scoop install pwsh sudo windows-terminal
+## Fonts
+scoop install FiraCode-NF
 
 # Update applications using Scoop
 Write-Host "Updating applications using Scoop..."
