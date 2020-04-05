@@ -18,8 +18,10 @@ scoop bucket add nerd-fonts
 # Install applications using Scoop
 Write-Host "Installing applications using Scoop..."
 
+## Prerequisites
+scoop install git vcredist2019
 ## Developer tools
-scoop install git nodejs vscode
+scoop install dotnet-sdk nodejs vscode
 ## System utilities
 scoop install pwsh sudo windows-terminal
 ## Fonts
