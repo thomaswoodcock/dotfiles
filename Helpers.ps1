@@ -30,23 +30,24 @@ function CreateSymbolicLinks {
     $missingLinks = @()
 
     foreach($link in $symbolicLinks) {
+        $target = Resolve-Path $link[1]
+
         if (-not(Test-Path -Path $link[0])) {
-            $missingLinks += @{ from = $link[0]; to = $link[1] }
+            $missingLinks += @{ from = $link[0]; to = $target }
             continue
         }
 
         $isSymbolic =  ((Get-Item $link[0]).Attributes.ToString() -match "ReparsePoint")
 
         if (-not($isSymbolic)) {
-            $missingLinks += @{ from = $link[0]; to = $link[1] }
+            $missingLinks += @{ from = $link[0]; to = $target }
             continue
         }
 
-        $target = Resolve-Path $link[1]
         $existingTarget = Get-Item -Path $link[0] | Select-Object -ExpandProperty Target
 
         if ($target.Path -ne $existingTarget) {
-            $missingLinks += @{ from = $link[0]; to = $link[1] }
+            $missingLinks += @{ from = $link[0]; to = $target }
         }
     }
 
