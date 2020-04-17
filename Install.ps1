@@ -2,6 +2,13 @@
 
 . .\Helpers.ps1
 
+# Install posh-git
+Write-Host "Installing posh-git..."
+
+if (-not(Get-Module -ListAvailable -Name posh-git)) {
+    Install-Module posh-git -Scope CurrentUser -Force
+}
+
 # Install Scoop
 Write-Host "Installing Scoop..."
 
@@ -52,7 +59,8 @@ Write-Host "Creating symbolic links..."
 $symbolicLinks = @(
     ("${env:USERPROFILE}\.gitconfig",".\.gitconfig"),
     ("${env:APPDATA}\Code\User\settings.json",".\vscode.settings.json"),
-    ("${env:LOCALAPPDATA}\Microsoft\Windows Terminal\profiles.json", ".\windows-terminal.profiles.json")
+    ("${env:LOCALAPPDATA}\Microsoft\Windows Terminal\profiles.json", ".\windows-terminal.profiles.json"),
+    ("$PROFILE", ".\pwsh.profile.ps1")
 )
 
 CreateSymbolicLinks $symbolicLinks
