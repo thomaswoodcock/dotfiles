@@ -28,7 +28,7 @@ Write-Host "Installing applications using Scoop..."
 ## Prerequisites
 scoop install git vcredist2019
 ## Developer tools
-scoop install dotnet-sdk nodejs vscode
+scoop install dotnet-sdk nodejs vim vscode
 ## System utilities
 scoop install pwsh sudo windows-terminal
 ## Fonts
@@ -57,10 +57,11 @@ SyncVsCodeExtensions $extensions
 Write-Host "Creating symbolic links..."
 
 $symbolicLinks = @(
-    ("${env:USERPROFILE}\.gitconfig",".\.gitconfig"),
+    ("${env:USERPROFILE}\.gitconfig",".\git.gitconfig"),
+    ("$PROFILE", ".\pwsh.profile.ps1"),
+    ("${env:USERPROFILE}\.vimrc", ".\vim.vimrc"),
     ("${env:APPDATA}\Code\User\settings.json",".\vscode.settings.json"),
-    ("${env:LOCALAPPDATA}\Microsoft\Windows Terminal\profiles.json", ".\windows-terminal.profiles.json"),
-    ("$PROFILE", ".\pwsh.profile.ps1")
+    ("${env:LOCALAPPDATA}\Microsoft\Windows Terminal\profiles.json", ".\windows-terminal.profiles.json")
 )
 
 CreateSymbolicLinks $symbolicLinks
