@@ -57,11 +57,11 @@ SyncVsCodeExtensions $extensions
 Write-Host "Creating symbolic links..."
 
 $symbolicLinks = @(
-    ("${env:USERPROFILE}\.gitconfig",".\git.gitconfig"),
-    ("$PROFILE", ".\pwsh.profile.ps1"),
-    ("${env:USERPROFILE}\.vimrc", ".\vim.vimrc"),
-    ("${env:APPDATA}\Code\User\settings.json",".\vscode.settings.json"),
-    ("${env:LOCALAPPDATA}\Microsoft\Windows Terminal\profiles.json", ".\windows-terminal.profiles.json")
+    ("${env:USERPROFILE}\.gitconfig",".\git\.gitconfig"),
+    ("$PROFILE", ".\pwsh\Microsoft.PowerShell_profile.ps1"),
+    ("${env:USERPROFILE}\.vimrc", ".\vim\.vimrc"),
+    ("${env:APPDATA}\Code\User\settings.json",".\vscode\settings.json"),
+    ("${env:LOCALAPPDATA}\Microsoft\Windows Terminal\profiles.json", ".\windows-terminal\profiles.json")
 )
 
 CreateSymbolicLinks $symbolicLinks
