@@ -4,13 +4,14 @@
   "disabledProfileSources": ["Windows.Terminal.Azure"],
   "profiles": [
     {
-      "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-      "name": "PowerShell Core",
-      "commandline": "pwsh.exe",
-      "hidden": false,
       "colorScheme": "Dark+",
+      "commandline": "pwsh.exe",
       "cursorShape": "emptyBox",
-      "fontSize": 11
+      "fontFace": "FiraCode NF",
+      "fontSize": 10,
+      "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+      "hidden": false,
+      "name": "PowerShell Core"
     }
   ],
   "schemes": [
