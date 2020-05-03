@@ -27,5 +27,8 @@
   // Language-specific settings
   "[csharp]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "JamesBirtles.svelte-vscode"
   }
 }
