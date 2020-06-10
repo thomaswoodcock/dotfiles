@@ -28,7 +28,7 @@ Write-Host "Installing applications using Scoop..."
 ## Prerequisites
 scoop install git vcredist2019
 ## Developer tools
-scoop install dotnet-sdk nodejs-lts vim vscode
+scoop install dotnet-sdk nodejs-lts racket vim vscode
 ## System utilities
 scoop install pwsh sudo windows-terminal
 ## Fonts
