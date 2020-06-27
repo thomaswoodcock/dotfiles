@@ -28,7 +28,7 @@ Write-Host "Installing applications using Scoop..."
 ## Prerequisites
 scoop install git vcredist2019
 ## Developer tools
-scoop install dotnet-sdk nodejs-lts racket vim vscode
+scoop install dotnet-sdk nodejs-lts vim vscode
 ## System utilities
 scoop install pwsh sudo windows-terminal
 ## Fonts
@@ -45,7 +45,6 @@ $extensions = @(
     "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "esbenp.prettier-vscode",
-    "jamesbirtles.svelte-vscode",
     "ms-dotnettools.csharp",
     "ms-vscode.powershell",
     "pkief.material-icon-theme",
