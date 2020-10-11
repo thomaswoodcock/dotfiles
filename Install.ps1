@@ -9,6 +9,20 @@ if (-not(Get-Module -ListAvailable -Name posh-git)) {
     Install-Module posh-git -Scope CurrentUser -Force
 }
 
+# Install oh-my-posh
+Write-Host "Installing oh-my-posh..."
+
+if (-not(Get-Module -ListAvailable -Name oh-my-posh)) {
+    Install-Module oh-my-posh -Scope CurrentUser -Force
+}
+
+# Install PSReadLine
+Write-Host "Installing PSReadLine..."
+
+if (-not(Get-Module -ListAvailable -Name PSReadLine)) {
+    Install-Module PSReadLine -Scope CurrentUser -Force -AllowPrerelease -SkipPublisherCheck
+}
+
 # Install Scoop
 Write-Host "Installing Scoop..."
 
