@@ -4,6 +4,9 @@ ui = true
 [credential]
 helper = manager
 
+[pull]
+rebase = false
+
 [push]
 default = simple
 
