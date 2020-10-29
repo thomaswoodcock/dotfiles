@@ -40,7 +40,7 @@ scoop bucket add nerd-fonts
 Write-Host "Installing applications using Scoop..."
 
 ## Prerequisites
-scoop install git vcredist2019
+scoop install azure-cli git vcredist2019
 ## Developer tools
 scoop install dotnet-sdk nodejs-lts vscode
 ## System utilities
