@@ -59,9 +59,11 @@ $extensions = @(
     "dbaeumer.vscode-eslint",
     "eamodio.gitlens",
     "esbenp.prettier-vscode",
+    "jmrog.vscode-nuget-package-manager",
     "ms-dotnettools.csharp",
     "ms-vscode.powershell",
     "pkief.material-icon-theme",
+    "visualstudioexptteam.vscodeintellicode",
     "zhuangtongfa.material-theme"
 )
 
