@@ -34,6 +34,7 @@ if (-not(Get-Command scoop -ErrorAction SilentlyContinue)) {
 # Add Scoop buckets
 Write-Host "Adding Scoop buckets..."
 scoop bucket add extras
+scoop bucket add JetBrains
 scoop bucket add nerd-fonts
 
 # Install applications using Scoop
@@ -42,7 +43,7 @@ Write-Host "Installing applications using Scoop..."
 ## Prerequisites
 scoop install azure-cli git vcredist2019
 ## Developer tools
-scoop install dotnet-sdk nodejs-lts vscode
+scoop install CLion dotnet-sdk nodejs-lts vscode
 ## System utilities
 scoop install pwsh sudo windows-terminal
 ## Fonts
