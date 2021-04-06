@@ -1,15 +1,15 @@
 [color]
-ui = true
+	ui = true
 
 [credential]
-helper = manager
+	helper = manager-core
 
 [pull]
-rebase = false
+	rebase = false
 
 [push]
-default = simple
+	default = simple
 
 [user]
-email = thomas@thomaswoodcock.net
-name = Thomas Woodcock
+	email = thomas@thomaswoodcock.net
+	name = Thomas Woodcock
