@@ -43,7 +43,7 @@ Write-Host "Installing applications using Scoop..."
 ## Prerequisites
 scoop install azure-cli git vcredist2019
 ## Developer tools
-scoop install CLion cmake dotnet-sdk gcc gdb nodejs-lts vscode
+scoop install CLion dotnet-sdk gcc gdb nodejs-lts vscode
 ## System utilities
 scoop install pwsh sudo windows-terminal
 ## Fonts
