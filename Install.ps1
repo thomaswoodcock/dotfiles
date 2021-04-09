@@ -33,6 +33,7 @@ if (-not(Get-Command scoop -ErrorAction SilentlyContinue)) {
 
 # Add Scoop buckets
 Write-Host "Adding Scoop buckets..."
+scoop bucket add dorado https://github.com/chawyehsu/dorado
 scoop bucket add extras
 scoop bucket add JetBrains
 scoop bucket add nerd-fonts
@@ -43,7 +44,7 @@ Write-Host "Installing applications using Scoop..."
 ## Prerequisites
 scoop install azure-cli git vcredist2019
 ## Developer tools
-scoop install CLion dotnet-sdk gcc gdb nodejs-lts vscode
+scoop install CLion dotnet-sdk nodejs-lts vscode winlibs-mingw
 ## System utilities
 scoop install pwsh sudo windows-terminal
 ## Fonts
