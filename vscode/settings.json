@@ -12,20 +12,11 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  // Omnisharp
-  "omnisharp.enableRoslynAnalyzers": true,
   // One Dark Pro
   "oneDarkPro.vivid": true,
   // PowerShell
   "powershell.integratedConsole.showOnStartup": false,
-  "powershell.startAsLoginShell.osx": false,
-  // Terminal
-  "terminal.integrated.shell.windows": "pwsh.exe",
   // Workbench
   "workbench.colorTheme": "One Dark Pro",
-  "workbench.iconTheme": "material-icon-theme",
-  // Language-specific settings
-  "[csharp]": {
-    "editor.defaultFormatter": "ms-dotnettools.csharp"
-  }
+  "workbench.iconTheme": "material-icon-theme"
 }
