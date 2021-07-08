@@ -43,7 +43,7 @@ Write-Host "Installing applications using Scoop..."
 ## Prerequisites
 scoop install azure-cli git vcredist2019
 ## Developer tools
-scoop install dotnet-sdk nodejs-lts vscode
+scoop install dotnet-sdk vscode
 ## System utilities
 scoop install pwsh sudo windows-terminal
 ## Fonts
@@ -57,14 +57,11 @@ scoop update *
 Write-Host "Syncing Visual Studio Code extensions..."
 
 $extensions = @(
-    "dbaeumer.vscode-eslint",
-    "eamodio.gitlens",
-    "esbenp.prettier-vscode",
-    "jmrog.vscode-nuget-package-manager",
-    "ms-dotnettools.csharp",
+    "ms-azuretools.vscode-docker",
     "ms-vscode.powershell",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-wsl",
     "pkief.material-icon-theme",
-    "visualstudioexptteam.vscodeintellicode",
     "zhuangtongfa.material-theme"
 )
 
